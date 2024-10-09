@@ -48,6 +48,7 @@
         // Fonction pour gérer le clic sur le bouton "Oui"
         function handleYesButtonClick() {
             const yesButton = document.querySelector('.oui');
+            const noButton = document.querySelector('.non'); // Sélectionne le bouton "Non"
             const body = document.body;
             const message = document.querySelector('.message');
 
@@ -60,6 +61,10 @@
                 top: 0,
                 behavior: 'smooth' // Défilement doux vers le haut
             });
+
+            // Cache les boutons
+            yesButton.style.display = 'none'; // Cache le bouton "Oui"
+            noButton.style.display = 'none'; // Cache le bouton "Non"
         }
 
         // Ajout d'un écouteur d'événement au chargement de la page
